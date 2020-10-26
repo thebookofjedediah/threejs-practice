@@ -20,20 +20,8 @@ function doChangeMaterial1()
 
 function applyTexture1(textureURL, cube_material) 
 {
-    var callback = function() 
-    {
-         try 
-         {
-            renderer.render( scene, camera );
-         } 
-         catch(e) 
-         {
-             document.getElementById("message").innerHTML =
-                "<b>Failed to load cube_texture!</b><br>Note that some browsers can't use textures from a local disk.";
-         }
-    };
 
-    cube_texture = THREE.TextureLoader(textureURL, undefined, callback);
+    cube_texture = THREE.TextureLoader(textureURL);
 
     cube_material.map = cube_texture; 
     cube_material.needsUpdate = true;  
