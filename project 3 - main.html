@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CMSC - 405 7980 Project 3.js app</title>
+        <style>
+            body { margin: 0; }
+            canvas { width: 100%; height: 100% }
+        </style>
+    </head>
+    <body onload="cameraDisplay(); doCube();">
+        <script src="build/three.js"></script>
+        
+        <p>
+            <label>Click the Animate checkbox first then select light option.</label>
+        </p>
+
+        <p>
+            <label><input type="checkbox" id="animate">Animate</label>
+        </p>
+
+        <p>
+            <label><input type="radio" id="pointLight1" name="model">Point Light 1</label>    
+            <label><input type="radio" id="pointLight2" name="model">Point Light 2</label>    
+            <label><input type="radio" id="pointLight1n2" name="model">Point Light 1 & 2</label>    
+        </p>
+
+        <p>
+            <label><input type="radio" id="spotLight" name="model">Spot Light (blue)</label>           
+            <label><input type="radio" id="ambientLight" name="model">Ambient Light (pink)</label>
+
+        </p>
+
+        <p>
+            <label><input type="checkbox" id="cubeTexture">Cube Texture</label> 
+ 
+        </p>
+
+        <script src="window-setup.js"></script>
+        <script src="animations.js"></script>
+
+        <script src="cube.js"></script>
+    </body>
+</html>
