@@ -33,7 +33,7 @@ function applyTexture1(textureURL, cube_material)
          }
     };
 
-    cube_texture = THREE.ImageUtils.loadTexture(textureURL, undefined, callback);
+    cube_texture = THREE.TextureLoader(textureURL, undefined, callback);
 
     cube_material.map = cube_texture; 
     cube_material.needsUpdate = true;  
