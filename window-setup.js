@@ -6,57 +6,46 @@ var pointLight2 = new THREE.PointLight(0xffffff, 1.5, 800);
 var ambientLight = new THREE.AmbientLight(0xE686E6, 1.0);
 var spotLight = new THREE.SpotLight( 0x2866EF);
 
-function setPointLighting1() 
-{
+function setPointLighting1() {
     scene.remove(pointLight2);
     scene.remove(ambientLight);
     scene.remove(spotLight);
 
-    if (document.getElementById("pointLight1").checked) 
-    {
+    if (document.getElementById("pointLight1").checked) {
         pointLight1.position.set( 55, 55, 15 );     
-
         scene.add(pointLight1);
     }
 }
 
-function setPointLighting2() 
-{
+function setPointLighting2() {
     scene.remove(pointLight1);
     scene.remove(ambientLight);
     scene.remove(spotLight);
 
-    if (document.getElementById("pointLight2").checked) 
-    {
+    if (document.getElementById("pointLight2").checked) {
         pointLight2.position.set( -55, -55, -15);         
-
         scene.add(pointLight2);
     }
 }
 
-function setPointLighting1n2() 
-{
+function setPointLighting1n2() {
     scene.remove(ambientLight);
     scene.remove(spotLight);
 
-    if (document.getElementById("pointLight1n2").checked) 
-    {
+    if (document.getElementById("pointLight1n2").checked) {
         pointLight1.position.set( 55, 55, 15 );    
         pointLight2.position.set( -55, -55, -15);         
-
         scene.add(pointLight1);
         scene.add(pointLight2);
     }
 }
 
-function setSpotLighting() 
-{
+function setSpotLighting() {
     scene.remove(ambientLight);
     scene.remove(pointLight1);
     scene.remove(pointLight2);
 
-    if (document.getElementById("spotLight").checked) 
-    {
+    if (document.getElementById("spotLight").checked) {
         spotLight.position.set( 100, 100, 100 );
         spotLight.castShadow = true;
         
@@ -71,20 +60,17 @@ function setSpotLighting()
     }
 }
 
-function setAmbientLighting() 
-{
+function setAmbientLighting() {
     scene.remove(pointLight1);
     scene.remove(pointLight2);
     scene.remove(spotLight);
 
-    if (document.getElementById("ambientLight").checked) 
-    {
+    if (document.getElementById("ambientLight").checked) {
         scene.add(ambientLight);
     }
 }
 
-function cameraDisplay()
-{
+function cameraDisplay(){
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -102,8 +88,7 @@ function cameraDisplay()
 }
 
 
-function onWindowResize()
-{
+function onWindowResize(){
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight );

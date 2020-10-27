@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC - 405 7980 Project 3.js app</title>
+    <style>
+        body { margin: 0; }
+        canvas { width: 100%; height: 100% }
+    </style>
+    <script src="build/three.js"></script>
+</head>
+<body onload="cameraDisplay(); doCube();">
+
+    <h1>Cube Using 3.js</h1>
+    <p>Click the Animate checkbox first then select light option.</p>
+
+    <label for="animate">Animate</label>
+    <input type="checkbox" id="animate">
+
+    <br>
+
+    <input type="radio" id="pointLight1" name="model">   
+    <label for="pointLight1">Point Light 1</label>
+
+    <input type="radio" id="pointLight2" name="model">
+    <label for="pointLight2">Point Light 2</label>   
+
+    <input type="radio" id="pointLight1n2" name="model">   
+    <label for="pointLight1n2">Point Light 1 & 2</label> 
+
+    <br>
+
+    <input type="radio" id="spotLight" name="model"> 
+    <label for="spotLight">Spot Light (blue)</label>    
+
+    <input type="radio" id="ambientLight" name="model">
+    <label for="ambientLight">Ambient Light (pink)</label>
+
+    <br>
+
+    <input type="checkbox" id="cubeTexture">
+    <label>Random Cube Texture</label> 
+
+    <script src="window-setup.js"></script>
+    <script src="animations.js"></script>
+    <script src="cube.js"></script>
+</body>
+</html>

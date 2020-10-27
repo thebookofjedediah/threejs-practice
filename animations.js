@@ -1,32 +1,26 @@
 var animating = false;
 
-function animateCube () 
-{
-    if (animating) 
-    {
+function animateCube () {
+    if (animating) {
         requestAnimationFrame( animateCube );
         cube.rotation.x += 0.01;
         cube.rotation.y += 0.01;
-
         renderer.render( scene, camera );
     }
 }
 
-function doAnimateCheckbox() 
-{
+function doAnimateCheckbox() {
     var anim = document.getElementById("animate").checked;
-    if (anim != animating) 
-    {
+    if (anim != animating) {
         animating = anim;
-        
-        if (animating) 
-        {
+        if (animating) {
             animateCube();
-            animateRengPrism();
-            animateSphere();
-            animatePyramid();
-            animateCone();
-            animateTop();
+            // None of these are necessary and they throw an error in the console since they are undefined
+            // animateRengPrism();
+            // animateSphere();
+            // animatePyramid();
+            // animateCone();
+            // animateTop();
 		}
     }  
 }
